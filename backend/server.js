@@ -81,3 +81,44 @@ app.use((err, req, res, next) => {
   console.error('Server error:', err.message);
   res.status(500).json({ message: err.message || 'Internal server error' });
 });
+
+// =======================
+// MONGODB CONNECTION
+// =======================
+const connectDB = async () => {
+  try {
+    if (!process.env.MONGODB_URI) {
+      throw new Error('MONGODB_URI environment variable is not set');
+    }
+
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('✓ Connected to MongoDB Atlas');
+  } catch (error) {
+    console.error('✗ MongoDB connection error:', error.message);
+    process.exit(1);
+  }
+};
+
+// =======================
+// GRACEFUL SHUTDOWN
+// =======================
+process.on('SIGINT', async () => {
+  console.log('\nShutting down gracefully...');
+  await mongoose.connection.close();
+  process.exit(0);
+});
+
+// =======================
+// START SERVER
+// =======================
+const startServer = async () => {
+  await connectDB();
+
+  app.listen(PORT, () => {
+    console.log(`\n🚀 WHO OWNS THIS? Backend`);
+    console.log(`   Server running on port ${PORT}`);
+    console.log(`   Health check: http://localhost:${PORT}/health\n`);
+  });
+};
+
+startServer();
