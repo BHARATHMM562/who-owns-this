@@ -1,73 +1,78 @@
-# Welcome to your Lovable project
+# WHO OWNS THIS? 🧠✅
 
-## Project info
+**WHO OWNS THIS?** is a full-stack web application designed to remove confusion in team projects by ensuring that every task has **exactly one clear owner**. It helps teams maintain accountability, transparency, and shared visibility with a simple and focused workflow.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🔗 **Live Application:**  
+👉 https://who-owns-this.vercel.app/
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+### 👤 Leader
+- Create a team
+- Generate a unique team join code
+- Create tasks
+- Assign **exactly one owner per task**
+- View all members and tasks
+- Track task status
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 👥 Member
+- Join a team using a join code
+- View all tasks in the team
+- Update the status **only for tasks they own**
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧭 Purpose
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This project focuses on **ownership clarity** in group work.  
+Instead of complex role systems, it enforces a simple rule:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+> **Every task must have one — and only one — owner.**
 
-Follow these steps:
+This makes it ideal for:
+- Student projects
+- Hackathons
+- Small teams
+- Portfolio demonstrations
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠 Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
+### Frontend
+- React (Vite)
 - TypeScript
-- React
-- shadcn-ui
+- React Router
 - Tailwind CSS
+- Deployed on **Vercel**
 
-## How can I deploy this project?
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- REST APIs
+- Deployed on **Render**
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🌐 How to Use the App (No Setup Required)
 
-Yes, you can!
+1. Open the live site:  
+   👉 https://who-owns-this.vercel.app/
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2. Create a team as a **Leader**
+3. Share the generated **team code**
+4. Members join using the code
+5. Create tasks and assign owners
+6. Track progress clearly — no confusion
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 📦 Local Development (Optional)
+
+### Clone the repository
+```bash
+git clone https://github.com/BHARATHMM562/who-owns-this.git
+cd who-owns-this
